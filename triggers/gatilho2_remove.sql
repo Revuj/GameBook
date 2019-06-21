@@ -1,0 +1,1 @@
+DROP TRIGGER IF EXISTS Compra_Idade_Minima;

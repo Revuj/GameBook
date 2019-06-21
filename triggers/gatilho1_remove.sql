@@ -1,0 +1,1 @@
+DROP TRIGGER IF EXISTS Xor_Desejo_Compra;

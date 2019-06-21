@@ -1,0 +1,7 @@
+CREATE TRIGGER Xor_Desejo_Compra
+AFTER INSERT ON Compra
+FOR EACH ROW
+WHEN EXISTS(SELECT * FROM Desejo_de_Compra WHERE ID=New.ID AND IDJogo=New.IDJogo)
+BEGIN
+	DELETE FROM Desejo_de_Compra WHERE ID=New.ID AND IDJogo=New.IDJogo;
+END;
